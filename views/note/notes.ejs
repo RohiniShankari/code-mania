@@ -1,0 +1,25 @@
+<%layout("/layouts/boilerplate")%>
+<div class="card">
+    
+    <div class="card-body">
+      <h5 class="card-title">write a note to remember things</h5>&nbsp;&nbsp;&nbsp;
+      <a href="/notes/create" class="btn btn-primary">Add Notes</a>
+      <br/>
+    </div>
+    <div class="container note-container" style="height:60vh;">
+    <%for(let note of notesArr){%>
+        
+            <div class="card  opacity-100 border-primary mb-3 note" style="max-width: 18rem;min-width:15rem; max-height:16rem;min-height:15rem;">
+                <h5 class="card-title" style="text-decoration: underline;">Note</h5>
+                <div class="card-body ">
+                  
+                  <p class="card-text text-dark"><%=note.content%></p>
+                </div>
+                <form  action="http://localhost:8080/notes/delete/<%=note._id%>" method="POST">
+                    <button type="submit"class="btn btn-danger" style="margin-bottom:0.5rem;">delete</button>
+                </form>
+            </div>
+        
+    <%}%>
+</div>
+  </div>

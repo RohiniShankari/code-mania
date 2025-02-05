@@ -1,0 +1,53 @@
+<%layout("/layouts/boilerplate")%>
+<div class="leetcode-page">
+  <h3 style="text-align:center;">Leetcode Profile</h3>
+<div class="leetcode-card container">
+
+  <div class="card container" style="width: 18rem;">
+    <img src=<%=details.profile.userAvatar%> class="card-img-top" alt="...">
+    <h5 class="card-title"><%=details.profile.realName%></h5>
+    <h5 class="card-title">Global Rank:&nbsp;<%=details.profile.ranking%></h5>
+    
+  </div>
+  
+  <div class="card container" style="width: 18rem;">
+    
+    <div class="card-body">
+      <h5 class="card-title">Star Rating:&nbsp;<%=details.profile.starRating%></h5>
+      <p class="card-text">Total Solved:&nbsp;<%=details.submissions[0].count%></p>
+      <p class="card-text">Easy Solved:&nbsp;<%=details.submissions[1].count%></p>
+      <p class="card-text">Medium Solved:&nbsp;<%=details.submissions[2].count%></p>
+      <p class="card-text">difficult Solved:&nbsp;<%=details.submissions[3].count%></p>
+      <a href="https://leetcode.com/" class="btn btn-primary">Go leetcode</a>
+    </div>
+  </div>
+  
+</div>
+
+
+</div>
+<h3 style="text-align:center;">Upcoming Leetcode Contests</h3>
+<div class="leetcode-card container">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%=contests.data[0].title%></h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">starts At:<%=contests.data[0].startTime%></h6>
+      <h6 class="card-subtitle mb-2 text-body-secondary">ends At:<%=contests.data[0].endTime%></h6>
+      
+      <a href="https://leetcode.com/contest/" class="btn btn-primary">Register</a>
+      
+    </div>
+  </div>
+  
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%=contests.data[1].title%></h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">starts At:<%=contests.data[1].startTime%></h6>
+      <h6 class="card-subtitle mb-2 text-body-secondary">ends At:<%=contests.data[1].endTime%></h6>
+      
+      <a href="https://leetcode.com/contest/" class="btn btn-primary">Register</a>
+      
+    </div>
+  </div>
+  
+</div>

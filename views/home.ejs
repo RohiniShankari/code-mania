@@ -1,0 +1,18 @@
+<% layout("/layouts/boilerplate") %>
+<div class="card text-bg-dark home-container">
+    <img src="/image.jpg" class="card-img background-img" alt="..." style="opacity:0.2;">
+    <div class="card-img-overlay row ">
+        
+        <div class="col-6 offset-1">
+      <h5 class="card-title">Code<br/>mania</h5>
+      <p>guide and tool of a coder</p>
+      <% if(!currUser){ %>
+        <a class="btn btn-primary" href="http://localhost:8080/user/signUp">sign Up</a>
+        <a class="btn btn-primary" href="http://localhost:8080/user/login">log in</a>
+        <%}%>
+        <% if(currUser){ %>
+        <a class="btn btn-secondary" href="http://localhost:8080/user/logout">log out</a>
+        <%}%>
+    </div>
+    </div>
+  </div>

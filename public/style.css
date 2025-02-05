@@ -1,0 +1,107 @@
+.leetcode-card{
+    
+   margin:1rem;
+    display:flex;
+    
+    justify-content:center;
+    align-items:center;
+    
+    height:100%;
+    width:100%;
+}
+.leetcode-card .card{
+    height:60vh;
+}
+.leetcode-page {
+    margin-top: 1rem;
+    
+}
+.hackthons-page{
+    
+    margin:1rem;
+     display:flex;
+     
+     justify-content:center;
+     align-items:center;
+     flex-wrap:wrap;
+     height:100%;
+     width:100%;
+ }
+.card,.card-body{
+    margin:0.5rem;
+    display:flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+    align-items:center;
+    height:auto;
+}
+.allCodingContests{
+    display:flex;
+    margin-left:0.5rem !important;
+    margin-top:1rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navbar{
+   
+    color: white !important;
+    font-size:larger;
+    font-weight:600;
+} 
+.note-container{
+    display:flex;
+    flex-wrap:wrap;
+    
+    
+}
+.note{
+    background-color:#638efd;
+    
+}
+
+.home-container {
+    padding: 0px !important;
+    margin: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%; 
+    border-radius: 0%;
+}
+.card-img-overlay {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 100%; 
+    text-align: center;
+}
+.card-img-overlay h5 {
+    font-size: 2.4rem; 
+    font-weight: bold; 
+}
+
+.card-img-overlay p {
+    font-size: 1.5rem; 
+}
+
+
+.flash-message {
+    position:fixed;
+   top:0;
+    padding: 10px; 
+    z-index: 9999; 
+    text-align: center;
+}
+
+.content{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+ 

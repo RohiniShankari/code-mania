@@ -1,0 +1,27 @@
+<%layout("/layouts/boilerplate")%>
+<h3 style="text-align:center;margin:1rem;">Creating note</h3>
+
+<div class="container" >
+    
+    <div class="row ">
+        <form class="needs-validation" novalidate method="POST"  action="http://localhost:8080/notes/save"  >
+        <div class="col-md-6 offset-md-3 border border-primary  p-3" style="border-radius: 0.5rem;">
+            <div class="form-floating">
+             
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="content" style="height: 100px" required></textarea>
+                <label for="floatingTextarea2">write the note</label>
+                <div class="valid-feedback">
+                  noted
+                </div>
+                <div class="invalid-feedback">
+                  please write the note
+                </div>
+              </div>
+              <br/>
+              
+              <button type="submit" class="btn btn-primary">Add</button>
+              
+        </div>
+    </form>
+    </div>
+</div>

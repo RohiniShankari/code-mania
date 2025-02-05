@@ -1,0 +1,14 @@
+<%layout("/layouts/boilerplate")%>
+<h1 style="text-align:center;">coding challenges</h1>
+<div class="row allCodingContests">
+  <%allContests.forEach(contest=>{%>
+    <div class="card" style="width: 32rem;">
+      <div class="card-body">
+        <h5 class="card-text"><%=contest.title%></h5><br/>
+        <p>platform:<%=contest.platform%></p>
+        <p class="card-text">startTime:<%=contest.startTime%><br/>endTime:<%=contest.endTime%></p>
+        <a href=<%=contest.url%> class="btn btn-primary">participate</a>
+      </div>
+    </div>
+    <%});%> 
+  </div>
