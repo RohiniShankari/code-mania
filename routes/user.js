@@ -18,7 +18,7 @@ router.post("/signUp",async(req,res)=>{
             return next(err);
         }
         req.flash("success","welcome to codemania");
-        res.redirect("/home");
+        res.redirect("/");
     });
     
     }catch(e){
@@ -35,7 +35,7 @@ router.post("/login",
     }),
     async(req, res) => {
         req.flash("success", "Welcome back to CodeMania!");
-        res.redirect("/home");
+        res.redirect("/");
     }
 );
 router.get("/login",async(req,res)=>{
@@ -49,7 +49,7 @@ router.get("/logout",async(req,res,next)=>{
         }
         
     });
-    res.redirect("/home");
+    res.redirect("/");
 });
 
 
