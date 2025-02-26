@@ -7,11 +7,11 @@
       <h5 class="card-title">Code<br/>mania</h5>
       <p>guide and tool of a coder</p>
       <% if(!currUser){ %>
-        <a class="btn btn-primary" href="http://localhost:8080/user/signUp">sign Up</a>
-        <a class="btn btn-primary" href="http://localhost:8080/user/login">log in</a>
+        <a class="btn btn-primary" href="/user/signUp">sign Up</a>
+        <a class="btn btn-primary" href="/user/login">log in</a>
         <%}%>
         <% if(currUser){ %>
-        <a class="btn btn-secondary" href="http://localhost:8080/user/logout">log out</a>
+        <a class="btn btn-secondary" href="/user/logout">log out</a>
         <%}%>
     </div>
     </div>

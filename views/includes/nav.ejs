@@ -1,24 +1,24 @@
 <nav class="navbar bg-primary navbar-expand-lg  sticky-top " style="padding-bottom:0.5rem;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="http://localhost:8080/home">codemania</a>
+      <a class="navbar-brand" href="/">codemania</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           
-          <a class="nav-link" href="http://localhost:8080/profile/leetcode">Leetcode</a>
-          <a class="nav-link" href="http://localhost:8080/compete/hackthons">Hackthons</a>
-          <a class="nav-link " href="http://localhost:8080/compete/codingChallenges">Coding challenges</a>
-          <a class="nav-link" href="http://localhost:8080/notes">Notes</a>
+          <a class="nav-link" href="/profile/leetcode">Leetcode</a>
+          <a class="nav-link" href="/compete/hackthons">Hackthons</a>
+          <a class="nav-link " href="/compete/codingChallenges">Coding challenges</a>
+          <a class="nav-link" href="/notes">Notes</a>
         </div>
         <div class="navbar-nav ms-auto">
           <% if(!currUser){ %>
-          <a class="nav-link" href="http://localhost:8080/user/signUp">sign Up</a>
-          <a class="nav-link" href="http://localhost:8080/user/login">log in</a>
+          <a class="nav-link" href="/user/signUp">sign Up</a>
+          <a class="nav-link" href="/user/login">log in</a>
           <%}%>
           <% if(currUser){ %>
-          <a class="nav-link" href="http://localhost:8080/user/logout">log out</a>
+          <a class="nav-link" href="/user/logout">log out</a>
           <%}%>
         </div>
       </div>

@@ -15,7 +15,7 @@
                   
                   <p class="card-text text-dark"><%=note.content%></p>
                 </div>
-                <form  action="http://localhost:8080/notes/delete/<%=note._id%>" method="POST">
+                <form  action="/notes/delete/<%=note._id%>" method="POST">
                     <button type="submit"class="btn btn-danger" style="margin-bottom:0.5rem;">delete</button>
                 </form>
             </div>
