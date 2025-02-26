@@ -3,19 +3,33 @@ const app=express();
 const mongoose=require("mongoose");
 const path=require("path");
 const engine= require("ejs-mate");
-
+require('dotenv').config();
 
 const passport=require("passport");
 const LocalStrategy=require("passport-local");
 const {User}=require("./models/user.js");
 const session=require("express-session");
+const MongoStore = require('connect-mongo');
 const flash=require("connect-flash");
 
 const noteRoute=require("./routes/note.js");
 const profileRoute=require("./routes/profile.js");
 const competeRoute=require("./routes/compete.js");
 const userRouter=require("./routes/user.js");
+
+const store=MongoStore.create({
+
+    mongoUrl:process.env.MONGOURL,
+    crypto:{
+        secret:"mysecretcode",
+    },
+    touchAfter:24*60*60
+});
+store.on("error",()=>{
+    console.log("error with session",err);
+});
 const sessionOptions={
+    store:store,
     secret:"mysecretcode",
     resave:false,
     saveUnintialized:true,
@@ -29,7 +43,7 @@ const sessionOptions={
 app.engine('ejs',engine);
 app.set("view engine", "ejs");
 app.set("views",path.join(__dirname,"views"));
-require('dotenv').config();
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended:true}));
 app.use(session(sessionOptions));
