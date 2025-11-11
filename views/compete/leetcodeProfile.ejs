@@ -28,26 +28,16 @@
 </div>
 <h3 style="text-align:center;">Upcoming Leetcode Contests</h3>
 <div class="leetcode-card container">
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title"><%=contests.data[0].title%></h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary">starts At:<%=contests.data[0].startTime%></h6>
-      <h6 class="card-subtitle mb-2 text-body-secondary">ends At:<%=contests.data[0].endTime%></h6>
-      
-      <a href="https://leetcode.com/contest/" class="btn btn-primary">Register</a>
-      
+   <% contests.data.forEach(function(contest) { %>
+    <div class="card m-3" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= contest.title %></h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Starts At: <%= contest.startTime %></h6>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Ends At: <%= contest.endTime %></h6>
+        <a href="<%= contest.url %>" class="btn btn-primary" target="_blank">Register</a>
+      </div>
     </div>
-  </div>
+  <% }) %>
   
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title"><%=contests.data[1].title%></h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary">starts At:<%=contests.data[1].startTime%></h6>
-      <h6 class="card-subtitle mb-2 text-body-secondary">ends At:<%=contests.data[1].endTime%></h6>
-      
-      <a href="https://leetcode.com/contest/" class="btn btn-primary">Register</a>
-      
-    </div>
-  </div>
   
 </div>
