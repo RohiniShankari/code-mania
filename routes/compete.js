@@ -25,7 +25,7 @@ router.get("/hackthons",isLoggedIn, async (req, res) => {
          res.render("compete/hackthons", { hackerearthHackthons:hackerearthHackthons,devfolioHackthons:devfolioHackthons }); // Send contests data to EJS
      } catch (error) {
         console.error(error);
-        res.status(500).send("Error fetching contests");
+        res.status(500).send(" We're currently upgrading this feature to fetch real-time hackathon data.");
     }
     
 });
